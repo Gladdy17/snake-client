@@ -15,6 +15,11 @@ const connect = function () {
 conn.on("connect", () => {
   console.log('Welcome You have Connected to Snake');
   conn.write('Name: GP');
+  conn.write('Move: up'); 
+
+  setInterval(() => {
+    conn.write("Move: up");
+  }, 500);
 });
 
  conn.on("data", (data) => {
