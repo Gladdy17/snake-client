@@ -13,7 +13,8 @@ const connect = function () {
   conn.setEncoding("utf8");
 
 conn.on("connect", () => {
-  console.log('Welcome You have Connected to Snake')
+  console.log('Welcome You have Connected to Snake');
+  conn.write('Name: GP');
 });
 
  conn.on("data", (data) => {
